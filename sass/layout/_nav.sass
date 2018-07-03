@@ -1,0 +1,72 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+
+.nav 
+    width: 100%
+    display: flex
+    justify-content: center
+    background: $white
+    padding: 20px 0
+
+    &__container
+        //width: 80%
+        display: flex
+        justify-content: space-between
+
+    &__wrap
+        //width: 30%
+        display: flex
+        //justify-content: space-around
+        align-items: center
+
+    &__logo
+
+        a
+            img
+                display: block
+        
+    &__menu
+        //width: 100%
+        display: flex
+        justify-content: space-around
+
+        li
+
+            a
+                color: $blue-sec
+                
+                &:hover
+                    color: #ccc
+
+
+    &__login
+        display: flex
+        align-items: center
+
+        a
+            color: $blue-log
+            font-size: .9em
+            
+            &:hover, &:focus 
+                color: #ccc
+
+        &__currency
+            display: flex
+
+        &__flag
+            margin-right: 10px
+
+        &__lang
+                display: none
+                margin-right: 5px
+                
+
+
+        &__divider
+            border-right: 1px solid #eee
+            margin: 0 20px 0 20px
+            height: 10px
+
+        img
+            margin-right: 10px

@@ -1,0 +1,1090 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+
+
+// Defined values
+$screen-xs-min: 320px;
+$screen-sm-min: 768px;
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-md-min: 992px;
+$screen-sm-max: ($screen-md-min - 1);
+$screen-lg-min: 1200px;
+$screen-md-max: ($screen-lg-min - 1);
+
+
+
+@media all and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) 
+    //nav
+    .nav
+        height: 115px
+        padding: 20px
+
+
+        &__container
+            width: 100%
+            flex-direction: column-reverse
+            align-items: flex-end
+
+        &__wrap
+            width: 100%
+            align-items: flex-end
+            justify-content: space-between
+
+        &__menu
+            width: 80%
+            justify-content: space-between
+
+            li
+                font-weight: 700
+                margin-right: 20px
+
+                &:nth-of-type(3)
+                    margin-right: 0
+
+        &__login
+            position: relative
+            width: 80%
+            justify-content: flex-end
+            top: 40px
+
+            li
+                &:nth-of-type(2)
+                    display: flex
+                    align-items: center
+
+                a
+                    display: flex
+                    align-items: center
+
+            &__flag
+                width: 48px
+                height: 24px
+                +background('../img/flagUKM.png', center, no-repeat)
+                background-size: cover
+
+            &__lang
+                display: none
+    
+    //hero
+    .hero
+        padding: 0 20px
+
+        &__wrap
+            width: 100%
+
+        &__desc
+            width: 100%
+
+            h6
+                font-weight: 700
+                margin: 10px 0 40px 0
+
+        &__arrows
+            width: 150px
+            height: 100%
+            display: flex
+            justify-content: space-between
+            align-items: flex-end
+            margin-bottom: 40px
+
+
+    //usp
+    .usp
+        padding: 20px 20px
+
+        &__wrap
+            width: 100%
+
+        &__title
+
+            h6
+                font-size: $h6-mob
+                font-weight: 400
+
+            h2 
+                font-size: $h2-mob
+
+            &__break
+                display: block
+
+        &__row
+            flex-direction: column
+
+            &:nth-of-type(1)
+                margin-bottom: 40px
+
+        &__cards
+            margin: 40px 0
+
+        &__card
+            width: 100%
+            
+            &:nth-of-type(1)
+                margin-bottom: 40px
+
+            &__circle
+                margin-right: 20px
+
+            &__text
+
+                h5
+                    font-size: $h5-mob
+
+    //offers
+    .offers
+        padding: 40px 20px
+
+        &__cards
+            width: 100%
+            flex-direction: column
+            
+
+        &__card
+            flex: 0 1 calc(50% - 1em)
+            margin-bottom: 20px
+            
+            &:nth-of-type(4)
+                margin-bottom: 0
+
+
+            &:nth-child(1)
+
+                .offers__img
+                    +background('../img/londonM.png', center, no-repeat)
+
+            &:nth-of-type(2)
+
+                .offers__img
+                    +background('../img/hamburgM.png', center, no-repeat)
+
+            &:nth-of-type(3)
+
+                .offers__img
+                    +background('../img/alicanteM.png', center, no-repeat)
+
+            &:nth-of-type(4)
+
+                .offers__img
+                    +background('../img/milanoM.png', center, no-repeat)
+
+
+        &__pretitle
+            width: 100%
+
+        &__title
+            font-size: 2.5em
+            text-align: center
+            margin-bottom: 30px
+
+            &__break
+                display: block
+
+        &__img
+            width: 100%
+            //max-width: 560px
+            height: 380px
+
+            &::before
+                content: ""
+                display: block
+                padding-top: 66.6%
+
+        &__desc
+
+            height: 180px
+            padding: 40px 20px
+
+            &__title
+
+                span
+                    font-size: 1.2em
+                    font-weight: 400
+
+            
+
+    //inspiration
+    .inspiration
+        padding: 40px 20px
+
+        &__text
+            flex-direction: column
+            text-align: center
+
+            h3
+                margin-bottom: 20px
+        
+        &__link
+            margin-left: 0
+
+    //classes
+    .classes
+        padding: 80px 20px
+
+        &__wrap
+            align-items: center
+
+            &--mobile
+                width: 100%
+
+        &__title
+
+            &--mobile
+
+                h5
+                    font-size: $h5-mob
+                    color: $blue-text
+                    font-weight: 700
+                    margin: 20px 0
+            
+            h6
+                font-size: $h6-mob
+            h2
+                font-size: $h2-mob
+        
+        &__link
+            margin-bottom: 20px
+
+        &__card
+            display: none
+
+            &--mobile
+                width: 100%
+                display: flex
+                flex-direction: column
+                background: $white
+                border-top: 10px solid $blue-sec
+                padding: 40px
+
+                &:nth-of-type(2)
+                    margin: 40px 0
+
+        &__main
+
+            &--mobile
+                display: flex
+                flex-direction: column
+                align-items: center
+
+        &__img
+
+            &--mobile
+                width: 100px
+
+        &__checks
+
+            &--mobile
+                width: 100%
+                margin-bottom: 20px
+
+                li
+                    display: flex
+                    align-items: baseline
+                    color: $blue-text
+
+                    &:nth-of-type(2)
+                        margin: 10px 0
+
+                    img
+                        margin-right: 10px
+
+        &__premium
+
+            &--mobile
+                width: 100%
+
+                li
+                    display: flex
+                    align-items: center
+                    color: #ccc
+
+                    &:nth-of-type(2)
+                        margin: 10px 0
+
+                    img
+                        height: 35px
+                        margin-right: 10px
+
+
+        &__link
+            font-size: $nav-linx
+
+    //footer
+    .footer
+
+        &__cnt
+            width: 100%
+            display: flex
+            flex-direction: column
+
+        &__sub
+            width: 100%
+            display: flex
+            flex-direction: column
+            padding: 20px 0 40px 0
+
+            p
+                width: 100%
+                display: flex
+                flex-direction: column
+                text-align: center
+
+        &__info
+
+            &__linx
+                justify-content: center
+                
+        &__linx
+            width: 100%
+            justify-content: center
+
+            li
+                border: 2px solid #eee
+                margin-right: 10px
+
+                &:hover, &:focus
+                    border: 2px solid $blue-light
+                    background: $blue-light
+
+                    .footer__linx__img
+                        
+                        &--first
+                            top: 20px
+                            
+                    
+                        &--second
+                            top: 20px
+                &:nth-of-type(3)
+                        margin-right: 0
+
+            &__img
+
+                &--first
+                    top: -20px
+                    
+            
+                &--second
+                    top: -20px
+
+
+        &__nl
+            display: block
+            margin-left: 5px
+
+        &__input
+            width: 80%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            border: 0
+
+            input
+                width: 100%
+                font-size: 1em
+                margin: 40px 0
+                border-bottom: 2px solid $white
+                padding-bottom: 15px
+
+            a
+                width: 100%
+                background: #fff
+                color: $blue-text
+                font-size: 2em
+                font-weight: bold
+                text-align: center
+                padding: 20px
+
+                &:hover, &:focus
+                    background: #d3d3d3
+                    color: #212121
+
+            
+            img
+                display: none
+
+        &__socials
+            width: 100%
+            flex-direction: column
+            background: $white
+            margin-bottom: -20px
+
+            p
+                color: $blue-light
+                margin: 40px 0
+            
+        &__info
+            display: flex
+            justify-content: center
+            align-content: center
+        
+            &__wrap
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+
+            &__payment
+                width: auto
+                justify-content: space-around
+                margin-bottom: 40px
+
+                li
+                    margin-right: 30px
+
+                    &:nth-of-type(4)
+                        margin-right: 0
+
+
+            &__linx
+                width: 100%
+
+                li
+                    margin-left: 0
+       
+                    a
+                        font-size: .9em
+
+                    &:nth-of-type(1)
+                        margin-right: 20px
+
+
+
+
+
+//small devices (tablet, notebook)
+
+@media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) 
+    //default
+    
+    //nav
+    .nav
+
+        &__container
+            width: 100%
+            padding: 0 20px
+
+        &__wrap
+            width: 50%
+
+        &__menu
+            width: 100%
+
+        &__login
+
+            li
+
+                a
+                    
+                    display: flex
+                    align-items: center
+
+            &__flag
+                width: 24px
+                height: 12px
+                +background('../img/flagUK.png', center, no-repeat)
+                background-size: cover
+
+            &__lang
+                display: flex
+
+    //hero
+    .hero
+        padding: 0 20px
+
+        &__wrap
+            width: 100%
+
+        &__arrows
+            width: 15%
+
+    //usp
+    .usp
+        padding: 20px 0 40px 0
+
+        &__wrap
+            width: 100%
+
+        &__row
+
+            &:nth-of-type(1)
+                margin: 60px 0
+
+        &__card
+            width: 50%
+
+
+    //inspiration
+    .inspiration
+
+        &__text
+
+            h3
+                padding-bottom: 10px
+
+        &__link
+            padding-bottom: 2px
+            
+    //offers
+    .offers
+        padding: 80px 15px
+
+        &__pretitle 
+            width: 100%
+
+        &__title
+            font-size: $h5-tab
+            font-weight: 300
+
+
+        &__cards
+            width: 100%
+
+        &__card
+            margin-bottom: 20px
+
+            &:nth-of-type(3)
+                margin-bottom: 0
+
+            &:nth-of-type(4)
+                margin-bottom: 0
+
+            &:nth-child(1)
+
+                .offers__img
+                    +background('../img/londonT.png', center, no-repeat)
+
+            &:nth-of-type(2)
+
+                .offers__img
+                    +background('../img/hamburgT.png', center, no-repeat)
+
+            &:nth-of-type(3)
+
+                .offers__img
+                    +background('../img/alicanteT.png', center, no-repeat)
+
+            &:nth-of-type(4)
+
+                .offers__img
+                    +background('../img/milanoT.png', center, no-repeat)
+
+        &__title
+
+            &__break
+                display: none
+
+        &__img
+            width: 100%
+            max-width: 355px
+            height: 224px
+
+        &__desc
+            width: 350px
+
+    //classes
+    .classes
+        padding: 40px 20px
+
+        &__wrap
+            width: 100%
+
+            &--mobile
+                display: none
+
+        &__title
+            width: 80%
+
+    //footer
+    .footer
+
+        &__cnt
+            width: 100%
+            display: flex
+            flex-direction: column
+
+        &__sub
+            width: 100%
+            display: flex
+            flex-direction: column
+            padding: 20px 0 40px 0
+
+            p
+                width: 100%
+                display: flex
+                justify-content: center
+                
+        &__linx
+            justify-content: space-around
+
+            li
+                border: 2px solid #eee
+
+                &:hover, &:focus
+                    border: 2px solid $blue-light
+                    background: $blue-light
+
+                    .footer__linx__img
+                        
+                        &--first
+                            top: 20px
+                            
+                    
+                        &--second
+                            top: 20px
+
+            &__img
+
+                &--first
+                    top: -20px
+                    
+            
+                &--second
+                    top: -20px
+
+            &:nth-of-type(3)
+                    margin-right: 0
+
+        &__nl
+            display: block
+            margin-left: 5px
+
+        &__input
+            width: 80%
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            border: 0
+
+            input
+                width: 80%
+                font-size: 1em
+                margin: 40px 0
+                border-bottom: 2px solid $white
+
+            a
+                width: 50%
+                background: #fff
+                color: $blue-text
+                font-weight: bold
+                text-align: center
+                padding: 10px 20px
+
+                &:hover, &:focus
+                    background: #d3d3d3
+                    color: #212121
+
+
+            
+            img
+                display: none
+
+        &__socials
+            width: 100%
+            flex-direction: column
+            background: $white
+            margin-bottom: -20px
+
+            p
+                color: $blue-light
+                margin: 40px 0
+            
+        &__info
+            display: flex
+            justify-content: center
+            align-content: center
+        
+            &__wrap
+                width: 100%
+                display: flex
+                flex-direction: column
+                align-items: center
+
+            &__payment
+                width: 40%
+                justify-content: space-around
+                margin-bottom: 40px
+
+                li
+                    margin-right: 0
+
+            &__linx
+                width: 100%
+                justify-content: center
+
+
+                li
+                    margin-left: 0
+
+                        
+                    a
+                        font-size: .9em
+
+                    &:nth-of-type(1)
+                        margin-right: 20px
+
+                
+
+            
+            
+ 
+
+//medium devices (laptop)
+
+@media all and (min-width: $screen-md-min) and (max-width: $screen-md-max) 
+    //nav
+    .nav
+
+        &__container
+            width: 100%
+            padding: 0 20px
+        
+        &__wrap
+            width: 40%
+        
+        &__menu
+            width: 100%
+
+        &__login
+            
+            li
+
+                a
+                    
+                    display: flex
+                    align-items: center
+
+            &__flag
+                width: 24px
+                height: 12px
+                +background('../img/flagUK.png', center, no-repeat)
+                background-size: cover
+
+            &__lang
+                display: flex
+    
+    //hero
+    .hero
+
+        &__wrap
+            width: 80%
+
+        &__arrows
+            width: 15%
+    
+
+    //usp
+    .usp
+        padding: 20px
+
+        &__row
+            margin: 60px 0
+
+
+    //offers
+    .offers
+        padding: 80px 20px
+        
+        &__pretitle
+            width: 100%
+
+        &__title
+
+            &__break
+                display: none
+
+        &__cards
+            width: 100%
+
+        &__card
+            flex: 0 1 24%
+
+            &:nth-child(1)
+
+            .offers__img
+                +background('../img/londonT.png', center, no-repeat)
+
+            &:nth-of-type(2)
+
+                .offers__img
+                    +background('../img/hamburgT.png', center, no-repeat)
+
+            &:nth-of-type(3)
+
+                .offers__img
+                    +background('../img/alicanteT.png', center, no-repeat)
+
+            &:nth-of-type(4)
+
+                .offers__img
+                    +background('../img/milanoT.png', center, no-repeat)
+
+        &__img
+            width: 100%
+            max-width: 355px
+            height: 224px
+
+        
+    
+    //classes
+    .classes
+        padding: 80px 20px
+
+        &__wrap
+
+            &--mobile
+                display: none
+    //footer
+    .footer
+        padding: 0 20px
+
+        &__cnt
+            width: 100%
+
+        &__sub
+            width: 50%
+
+        &__input
+            display: flex
+            align-items: baseline
+
+            a
+                display: flex
+                align-items: baseline
+
+            img
+                margin-left: 5px
+
+        &__socials
+
+            p
+                margin-right: 20px
+
+        &__linx
+            justify-content: space-between
+
+        &__info
+
+            &__wrap 
+                width: 100%
+                padding: 0 20px
+
+
+        &__linx
+
+            li
+                border: 1px solid $blue-spec
+
+                &:hover, &:focus
+                    border: 1px solid $white
+                    background: #fff
+
+                    .footer__linx__img
+                        
+                        &--first
+                            top: -22px
+                            
+                    
+                        &--second
+                            top: -22px
+
+            &__img
+
+                &--first
+                    top: 22px
+                    
+            
+                &--second
+                    top: 20px
+
+
+
+        &__nl
+            display: none
+
+            
+        
+ 
+
+//large screen
+
+@media all and (min-width: $screen-lg-min)  
+    //nav
+    .nav
+
+        &__container
+            width: 80%
+
+        &__wrap
+            width: 50%
+            justify-content: flex-start
+
+        &__menu
+            width: 50%
+
+        &__login
+            width: 50%
+            justify-content: flex-end
+
+            li
+
+                a
+
+                    
+                display: flex
+                align-items: center
+
+            &__flag
+                width: 24px
+                height: 12px
+                +background('../img/flagUK.png', center, no-repeat)
+                background-size: cover
+
+            &__lang
+                display: flex
+
+    //hero
+    .hero
+        padding: 0 20px
+
+        &__wrap
+            width: 75%
+
+        &__arrows
+            width: 10%
+
+    //usp
+    .usp
+        padding: 40px 0
+
+        &__wrap
+            width: 70%
+        
+        &__row
+
+            &:nth-of-type(1)
+                margin: 60px 0
+
+        &__card
+            width: 40%
+    //offers
+    .offers
+
+        &__pretitle
+            width: 70%
+
+        &__title
+
+            &__break
+                display: none
+        
+        &__cards
+            width: 70%
+        
+        &__card
+            flex: 0 1 24%
+
+            &:nth-child(1)
+
+            .offers__img
+                +background('../img/london.png', center, no-repeat)
+
+            &:nth-of-type(2)
+
+                .offers__img
+                    +background('../img/hamburg.png', center, no-repeat)
+
+            &:nth-of-type(3)
+
+                .offers__img
+                    +background('../img/alicante.png', center, no-repeat)
+
+            &:nth-of-type(4)
+
+                .offers__img
+                    +background('../img/milano.png', center, no-repeat)
+
+            &__img
+                width: 100%
+                max-width: 240px
+                height: 170px
+
+        
+
+    //classes
+    .classes
+
+        &__wrap
+            width: 70%
+
+            &--mobile
+                display: none
+
+        &__title
+            width: 50%
+
+    //footer
+    .footer
+
+        &__sub
+            width: 50%
+
+        &__input
+            display: flex
+
+            a
+                display: flex
+                align-items: center
+
+                img
+                    margin-left: 5px
+
+        &__socials
+
+            p
+                margin-right: 20px
+
+        
+
+
+        &__info
+
+            &__linx
+                justify-content: space-around
+
+        &__linx
+            justify-content: space-between
+
+            li
+                border: 1px solid $blue-spec
+
+                &:hover, &:focus
+                    border: 1px solid $white
+                    background: #fff
+
+                    .footer__linx__img
+                        
+                        &--first
+                            top: -22px
+                            
+                    
+                        &--second
+                            top: -22px
+
+                        
+
+            &__img
+
+                &--first
+                    top: 22px
+                    
+            
+                &--second
+                    top: 20px
+
+            
+
+        &__nl
+            display: none
+    

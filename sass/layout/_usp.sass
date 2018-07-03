@@ -1,0 +1,71 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+
+.usp
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    
+
+    &__wrap
+        //width: 70%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+
+    &__title 
+        text-align: center
+
+        h6
+            font-size: $small-title
+            font-weight: 300
+            text-transform: uppercase
+            margin-bottom: 10px
+            color: $gray
+        
+        h2
+            color: $blue-sec
+
+        &__break
+            display: none
+
+
+    &__row
+        display: flex
+        justify-content: space-around
+
+        
+    &__cards
+        display: flex
+        flex-direction: column
+    
+    &__card
+        //width: 40%
+        display: flex
+        justify-content: space-around
+        align-items: center
+
+        &__text
+            width: 70%
+            color: $blue-text
+        
+            h5
+                font-size: $h5
+                margin-bottom: 10px
+
+            p
+                font-size: $text
+
+
+    &__circle
+        width: 80px
+        height: 80px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 3px solid #ccc
+        border-left: 0
+        border-radius: 50%

@@ -1,0 +1,171 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.footer
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background: $blue-light
+
+
+    &__cnt
+        width: 80%
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 0
+
+    &__input
+        border-bottom: 1px solid $white
+
+    &__sub
+        width: 40%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+        p
+            font-size: 1.5em
+            font-weight: 400
+            color: $white
+        
+
+        input
+            width: 250px
+            padding: 0 0 7px 5px
+            border: 0
+            color: $blue-spec
+            background: transparent
+
+
+        a
+            margin-left: -4px
+            padding-bottom: 4px
+            font-size: 1em
+            color: $white
+            //border-bottom: 1px solid $white
+            +transition(all, .3s, ease-in-out)
+
+            &:hover, &:focus
+                img
+                    left: 15px
+                    opacity: 0
+
+            img
+                position: relative
+                width: 9px
+                left: 0
+                vertical-align: baseline
+                opacity: 1
+                +transition(all, .3s, ease-in-out)
+
+    &__socials
+        width: 50%
+        display: flex
+        justify-content: flex-end
+        align-items: center
+
+        p
+            font-size: 1.5em
+            font-weight: 400
+            color: $white
+
+    &__linx
+        width: 40%
+        display: flex
+        //justify-content: space-around
+
+        li
+            position: relative
+            width: 60px
+            height: 60px
+            display: flex
+            justify-content: center
+            align-items: center
+            
+            //border: 1px solid $blue-spec
+            border-radius: 50%
+            padding: 0
+            overflow: hidden
+            +transition(all, .3s, ease-in-out)
+            
+
+            a
+                position: relative
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                padding: 1em
+                border-radius: 50%
+                background: transparent
+                overflow: hidden
+
+        &__img
+            position: relative
+            +transition(top, .3s, ease-in-out)
+
+            &--first
+                margin-bottom: 20px
+
+
+            
+
+
+                
+                    
+
+
+    &__info
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        background: $white
+        padding: 40px 0
+        border-bottom: 10px solid $blue-spec
+
+        &__wrap
+            width: 80%
+            display: flex
+            justify-content: space-between
+
+        &__payment
+            width: 40%
+            display: flex
+            justify-content: flex-start
+            align-items: center
+
+            li
+                margin-right: 3%
+
+        &__linx
+            width: 40%
+            display: flex
+            justify-content: flex-end
+
+            li
+                margin-left: 3%
+
+                a
+                    color: $ftr-linx
+
+                    &:hover, &:focus
+                        color: #212121
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

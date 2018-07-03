@@ -1,0 +1,69 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+
+.hero
+    width: 100%
+    height: 549px
+    display: flex
+    justify-content: center
+    +background('../img/slide01.jpg', center, no-repeat)
+    background-size: cover
+
+    &__wrap
+        //width: 75%
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__desc
+
+        h2
+            color: $white
+
+        h6
+            font-size: $h6
+            font-weight: 400
+            margin: 20px 0 30px 0
+            color: $white
+
+            span
+                position: relative
+                font-size: .6em
+                bottom: 2px
+                left: 2px
+
+        a
+            background: $blue-light
+            color: $white
+            font-weight: bold
+            padding: 10px 20px
+
+            &:hover, &:focus
+                background: $white
+                color: $blue-light
+
+    &__arrows
+        display: flex
+        justify-content: space-around
+        //width: 10%
+
+    &__arrow
+        width: 40px
+        height: 40px
+        display: flex
+        justify-content: center
+        align-items: center
+        border: 1px solid #b5c0c9
+        border-radius: 50%
+        cursor: pointer
+        +transition(all, .3s, ease-in-out)
+
+        &:hover, &:focus
+          border: 1px solid $white  
+
+        
+
+
+
+

@@ -1,0 +1,44 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.inspiration
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 40px 0
+
+    &__text
+        display: flex
+        justify-content: center
+        align-items: center
+
+        h3
+            font-size: $h4
+            color: $blue-light
+            letter-spacing: 0
+
+        a
+            font-size: 2em
+            padding-bottom: 5px
+
+    &__link        
+        position: relative   
+        color: $blue-light
+        font-weight: 700
+        border-bottom: 3px dashed $blue-light
+        margin-left: 10px
+        +transition(all, .3s, ease-in-out)
+
+        &:hover, &:focus
+            color: #666666
+            border-bottom-color: #666666
+            
+
+
+            
+
+
+
+
+
+
